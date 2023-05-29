@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y Makefile
 # Run the make command
 RUN Makefile
 
-# Your application's run command
+# application's run command
 CMD ["./apiserver"]
 
 docker build -t image
