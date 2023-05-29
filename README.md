@@ -6,6 +6,29 @@ In store.go path for gmail.txt is full because host is running on the other dire
 
 in apiserver sending emails is written but its not working cuz i have problem with pointer with getting Emails from file
 
+DockerFile needs to look like this
+# Use an existing docker image as a base
+FROM debian:latest
+
+# Set the working directory in the container
+WORKDIR \apischool\cmd\apiserver
+
+# Copy the current directory contents into the container at /app
+COPY . /apiserver
+
+# Install make
+RUN apt-get update && apt-get install -y Makefile
+
+# Run the make command
+RUN Makefile
+
+# Your application's run command
+CMD ["./apiserver"]
+
+docker build -t image
+
+docker run -p 4000:80 image
+
 Docker engine error that i cant resolve
 
 Problem is in my Windows arm64, that doesnt support Docker engine. I tried to open Docker with VM, but got the same error.
