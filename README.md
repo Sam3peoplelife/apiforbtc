@@ -6,7 +6,10 @@ In store.go path for gmail.txt is full because host is running on the other dire
 
 in apiserver sending emails is written but its not working cuz i have problem with pointer with getting Emails from file
 
-Docker engine error that i cant resolve 
+Docker engine error that i cant resolve
+
+Problem is in my Windows arm64, that doesnt support Docker engine. I tried to open Docker with VM, but got the same error.
+
 Newtonsoft.Json.JsonReaderException:
 Unexpected character encountered while parsing value: n. Path '', line 0, position 0.
    at Newtonsoft.Json.JsonTextReader.ParseValue()
